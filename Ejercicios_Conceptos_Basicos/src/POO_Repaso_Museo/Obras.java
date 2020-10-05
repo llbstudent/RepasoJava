@@ -1,3 +1,5 @@
+package POO_Repaso_Museo;
+
 public abstract class Obras{
 
 	public String titulo, autor;

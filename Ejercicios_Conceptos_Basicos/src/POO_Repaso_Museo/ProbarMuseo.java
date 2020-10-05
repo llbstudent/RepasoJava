@@ -1,3 +1,5 @@
+package POO_Repaso_Museo;
+
 import java.util.Scanner;
 
 public class ProbarMuseo{

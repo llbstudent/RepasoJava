@@ -1,4 +1,4 @@
-package Recursividad;
+package T4_Recursividad;
 /*
  * Calcular la media de los números pares de un ArrayList
  * */

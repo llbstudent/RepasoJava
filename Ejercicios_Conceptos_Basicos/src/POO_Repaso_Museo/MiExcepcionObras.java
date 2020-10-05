@@ -1,3 +1,6 @@
+
+package POO_Repaso_Museo;
+
 public class MiExcepcionObras extends Exception{
 	//Constructores
 	// DEFECTO

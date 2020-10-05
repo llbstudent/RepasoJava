@@ -1,4 +1,4 @@
-package Recursividad;
+package T4_Recursividad;
 
 //Que nos diga si hay, nos devuelve verdaderos si alguno de los objeto es integer o Persona
 

@@ -1,4 +1,4 @@
-package Recursividad;
+package T4_Recursividad;
 
 import java.util.Scanner;
 

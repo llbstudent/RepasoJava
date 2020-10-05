@@ -1,3 +1,5 @@
+package POO_Repaso_Museo;
+
 public class Pinturas extends Obras{
 	 /**
 	 * He preferido hacer este atributo privado al igual que el de las 

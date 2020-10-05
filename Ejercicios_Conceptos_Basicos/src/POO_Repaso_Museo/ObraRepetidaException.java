@@ -1,3 +1,5 @@
+package POO_Repaso_Museo;
+
 public class ObraRepetidaException extends Exception{
 	//Constructores
 	// DEFECTO

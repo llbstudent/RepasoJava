@@ -1,3 +1,6 @@
+
+package POO_Repaso_Museo;
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;

@@ -1,0 +1,33 @@
+Implementa una aplicación para simular la gestión de procesos de un sistema operativo. 
+Existirán tres colas de prioridad 1,2 y 3, que serán atendidas en ese mismo orden. 
+La entrada de proceso se simulará mediante dos arrays de procesos de 10 elementos cada uno. 
+
+El primero se transferirá a las colas al comienzo de la aplicación y el segundo una vez que se comience a atender los procesos que hay en las colas. Necesitaremos implementar un clase Cola que guardará los procesos en el mismo orden el que van llegando y que tendrá los siguientes métodos:
+
+•inscola ( Proceso p);
+•Proceso desenCola ( ); // retorna un proceso para ser antendido y lo borra de la cola;
+•boolean esVaciaCola(); // nos dice si la cola está vacia
+•toString ( ); muestra todos los elementos existentes en la cola;
+•creaCola ( ); Crea una cola vacía, instanciando el ArrayList.
+
+
+El constructor de cola será private.
+Para cada proceso se necesitará: 
+un id (entero) 
+tiempo (entero; aleatorio entre 300 y 2000 milisegundos) 
+prioridad(entero; de 1 a 3) 
+y un método toString para mostrar los datos.
+
+_________
+La aplicación se ejecutará de la siguiente forma:
+_________
+1. Primero cargará 10 procesos (array de procesos) en la diferentes colas del sistema.
+2. Después comenzará a atender esos procesos mostrando información de cada proceso y el estado de las colas. 
+Mostrará también el tiempo que se está empleando en atender al proceso actual mediante una cuenta atrás. 
+Simularemos que se está atendido un proceso durmiendo la aplicación con el método Thread.sleep ( 100); 
+que dormírá el tiempo durante 0,1 segundos. 
+Cada segundo (1000 milisegundos) entrará un nuevo proceso en una de las colas desde el segundo array de procesos.
+
+3.La aplicación mostrará un mensaje de finalización cuando no haya más proceso en las colas ni en el array de procesos.
+
+-LinkedList()/Vector

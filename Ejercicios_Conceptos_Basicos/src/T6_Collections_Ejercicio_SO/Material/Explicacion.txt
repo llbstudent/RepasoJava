@@ -22,6 +22,7 @@ _________
 La aplicación se ejecutará de la siguiente forma:
 _________
 1. Primero cargará 10 procesos (array de procesos) en la diferentes colas del sistema.
+
 2. Después comenzará a atender esos procesos mostrando información de cada proceso y el estado de las colas. 
 Mostrará también el tiempo que se está empleando en atender al proceso actual mediante una cuenta atrás. 
 Simularemos que se está atendido un proceso durmiendo la aplicación con el método Thread.sleep ( 100); 

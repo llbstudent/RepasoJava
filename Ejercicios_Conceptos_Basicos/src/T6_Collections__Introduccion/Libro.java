@@ -34,5 +34,19 @@ public abstract class Libro {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	//------------------
+	//Métodos
+	//------------------
+	
+	public void verReserva() {
+		if(this.reservado)
+			System.out.println("El libro está reservado");
+		else
+			System.out.println("El libro no está reservado, puede alquilarlo");
+	}
+	
+	//método abstracto
+	public abstract void resumen(String txt);
 
 }

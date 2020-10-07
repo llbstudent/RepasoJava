@@ -1,0 +1,84 @@
+_____________________________
+COLLECTIONS / COLECCTIONES
+_____________________________
+Es una interfaz de la que descienden: Set, List, Queue
+También esta 'Map', pero no hereda directamente de Collection
+
+-Son almacenes de objetos dinámicos (ArrayList), es decir pueden cambiar de tamaño.
+
+-Pueden ir provistas de ordenamiento
+
+-Se puede Insertar/Eliminar elementos
+
+________________
+
+==========
+1. SET
+==========
+Te permite almacenar una colección de elementos no repetidos y sin ordenar (Titulares Cuenta Corriente).
+	VENTAJAS:
+	-No permiten elementos duplicados
+	-Uso sencillo del método 'add' que además no añade elementos duplicados
+
+CLASES ASOCIADAS:
+-HashSet:
+	-Rápida
+	-No duplicados
+	-No ordenación
+	-No acc.Aleatorio
+
+-LinkedHashSet:
+	-Ordenación por entrada
+	-Efficiente al acceder
+	-No eficiente al agregar
+
+TreeSet:
+	-Es ordenado
+	-Poco eficiente
+
+EnumSet: La mejor para tipos enumerados
+
+CopyOnWriteArraySet:
+	-Específico concurrencia
+	-Eficiente en lectura
+	-Poco eficiente en agreg/elim
+
+
+ConsurrentSkipListSet:
+	-Específico concurrencia
+	-Admite ordenacion
+	-Con muchos elementos no es eficiente
+
+
+==========
+2. LIST
+==========
+Tiene elementos pueden estar repetidos y están ordenados/indexados númericamente (Sustituto dinámico del Array).
+Ofrece acceso aleatorio (Acceso al elemento 15, 340...).
+List tiene más funcionalidades que 'Set', pero menos eficiencia.
+VENTAJAS:
+	- Acceso aleatorio
+	- Están ordenadas (collection.sort();)
+	- Eliminar/Añadir sin restricción
+	- ListIterator modifica cualquier dirección
+	- Sintax. Similar a los Arrays
+
+CLASES ASOCIADAS:
+	-ArrayList: Muy rápida accediendo a elementos. Se adapta a un gran número de escenarios
+	-LinkedList: Listas enlazadas, gran eficiencia agre/elim elementos, pero no tanta leyendo elementos
+	-Vector: Utilizada únicamente en operaciones de concurrencia, considerada cmo obsoleta
+	-CopyOnWriteArrayList: utilizada sólo también en operaciones de concurrencia. Eficiente en lectura pero pòco en escritura
+
+==========
+3. QUEUE
+==========
+No permite acceso aleatorio, sólo permiten acceso al principio o final de los elementos de la cola.
+
+
+==========
+4. MAP
+==========
+Permite crear una coleccion de elementos repetidos, pero identificamos a los elementos por una clave (elemt -> Juan, elemt2 -> Maria).
+Es como en PHP con los Arrays asociativos.
+
+________________

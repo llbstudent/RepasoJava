@@ -1,8 +1,8 @@
-package POO_5_ClasesAbstractas_Interfaces_ENUM;
+package POO_5__ClasesAbstractas__Interfaces_ENUM;
 
 import java.util.Date;
 
-public class Electrodomestico_Padre implements Dispositivo_Interf{
+public abstract class Electrodomestico_Padre implements Dispositivo_Interf{
 
 	protected int ID_Electrodomestico;
 	protected boolean corrienteActiva;

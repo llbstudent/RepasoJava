@@ -30,4 +30,4 @@ Cada segundo (1000 milisegundos) entrará un nuevo proceso en una de las colas d
 
 3.La aplicación mostrará un mensaje de finalización cuando no haya más proceso en las colas ni en el array de procesos.
 
--LinkedList()/Vector
+-Usar: LinkedList()/Vector

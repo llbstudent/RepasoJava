@@ -3,6 +3,8 @@ package T6_Collections_Ejercicio_SO;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+
+//extends LinkedList<Proceso>
 public class Cola {
 	private	LinkedList<Proceso> procesosListado;
 	int prioridadProcesosCola;

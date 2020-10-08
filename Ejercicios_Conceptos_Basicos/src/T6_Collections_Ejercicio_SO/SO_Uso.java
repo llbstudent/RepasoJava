@@ -26,12 +26,13 @@ public class SO_Uso extends Thread{
 		insertarProcesos(cola1, cola2, cola3, primerosProcesos);
 		
 		//Simulacion de la ejecución de los procesos
-		atencionProcesos(cola1, cola2, cola3, segundosProcesos);
+		atencionProcesos(cola1, cola2, cola3, segundosProcesos, primerosProcesos);
 
 	}
 
 	//Nos ejecuta los procesos dependiendo del orden de las colas
-	private static void atencionProcesos (Cola c1, Cola c2, Cola c3, Vector<Proceso> procesos) throws InterruptedException {
+	private static void atencionProcesos (Cola c1, Cola c2, Cola c3, Vector<Proceso> procesos, Vector<Proceso> procesos1) 
+			throws InterruptedException {
 		Proceso procesoAux;
 		boolean todoVacio = false;
 		
@@ -75,9 +76,15 @@ public class SO_Uso extends Thread{
 	            	
 	            } else {
 	            	todoVacio = true;
-	                System.out.println("\n****************************"
-	                		+ "Ya no hay más procesos que ejecutar"
-	                		+ "****************************");
+	                System.out.println("\n**************************************************"
+	                		+ "\nYa no hay más procesos que ejecutar"
+	                		+ "\n**************************************************"
+	                		+ "\n\tCola de proceso (vector1).Capacity: " + procesos.size()
+	                		+ "\n\tCola de proceso (vector2).Capacity: "	+ procesos1.size()
+	                		+ "\n\tCola de proceso (Cola1).Capacity: " + c1.getProcesosListado().size()
+	                		+ "\n\tCola de proceso (Cola2).Capacity: " + c2.getProcesosListado().size()
+	                		+ "\n\tCola de proceso (Cola3).Capacity: " + c3.getProcesosListado().size()
+	                		+ "\n**************************************************");
 	            }
 		}while(!todoVacio);
 	}

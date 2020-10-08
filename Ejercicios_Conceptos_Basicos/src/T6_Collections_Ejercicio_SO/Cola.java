@@ -56,13 +56,13 @@ public class Cola {
 	
 	//Nos muestra todos los elementos existentes de la cola
 	public String toString() {
-		String data = "";
+		StringBuilder data = new StringBuilder();
 		ListIterator<Proceso> listaIt = this.procesosListado.listIterator();
 		
 		while(listaIt.hasNext()) {
-			data += listaIt.next();
+			data.append(listaIt.next() + "\n");
 		}
-		return data;
+		return data.toString();
 	}
 	
 	//Nos crea una cola vacía instanciando el LinkedList

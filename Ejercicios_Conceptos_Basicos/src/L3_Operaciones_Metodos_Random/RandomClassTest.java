@@ -54,16 +54,7 @@ public class RandomClassTest {
 		System.out.println("Repartimos una baraja de cartas: ");
 		repartirBarajaCartas(cartas);
 		
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
+		
 	}
 
 	//Método que nos hace repartir una baraja de cartas

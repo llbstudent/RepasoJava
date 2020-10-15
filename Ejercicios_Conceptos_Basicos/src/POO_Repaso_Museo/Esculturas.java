@@ -22,7 +22,6 @@ public class Esculturas extends Obras{
 
 	//METODOS SET y GET
 	public String getInformacion_Material(){ return this.informacion_material; }
-
 	public void setInformacion_Material(String informacion_material){ this.informacion_material = informacion_material;}
 
 

@@ -1,4 +1,4 @@
-Holpackage L6_Strings.cadenas;
+package L6_Strings.cadenas;
 
 import java.util.Scanner;
 

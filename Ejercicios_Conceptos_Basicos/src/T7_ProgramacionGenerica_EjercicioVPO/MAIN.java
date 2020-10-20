@@ -71,16 +71,20 @@ public class MAIN {
 
 	}
 
+	
+	// Método que contiene el algotirmo para sortear las viviendas
 	private static void sorteo_de_Viviendas_por_Prioridad(ArrayList<Ganador> lstGanadores, ArrayList<Aspirante_Persona> personas, 
 		ArrayList<Aspirante_Organizacion> organizaciones, ArrayList<Vivienda> viviendasLST) {
 
-		// Recorremos las viviendas a sortear con un iterador
-		for (int i = 0, cond = 1; i < viviendasLST.size() && cond < 4; i++) {
+		// Recorremos las viviendas a sortear, per sólo hasta los que contienen minúsvalidos, la condicion será un entero 'cont'
+		for (int i = 0, cond = 1; cond < 3; i++) {
+			//Primero repartimos a los que tienen hijos y luego a los que son minúsvalidos
 			for (int j = 0; j < personas.size(); j++) {
 				switch (cond) {
 				case 1:
 					if (personas.get(j).getTipo().equals(Enum_TipoPersona.Con_Hijos)) {
 						lstGanadores.add(new Ganador<Vivienda, Aspirante_Persona>(viviendasLST.get(i), personas.get(j)));
+						viviendasLST.remove(i);
 						personas.remove(j);
 					}
 					if (j == personas.size() - 1)
@@ -90,27 +94,31 @@ public class MAIN {
 				case 2:
 					if (personas.get(j).getTipo().equals(Enum_TipoPersona.Minusvalido)) {
 						lstGanadores.add(new Ganador<Vivienda, Aspirante_Persona>(viviendasLST.get(i), personas.get(j)));
+						viviendasLST.remove(i);
 						personas.remove(j);
 					}
 					if (j == personas.size() - 1)
 						cond++;
 					break;
-
-				case 3:
-					List<Aspirante> restoaspirantes = new ArrayList<Aspirante>();
-					restoaspirantes.addAll(personas);
-					restoaspirantes.addAll(organizaciones);
-					Collections.shuffle(restoaspirantes);
-
-					lstGanadores.add(new Ganador(viviendasLST.get(i), restoaspirantes.get(0)));
-					//viviendasLST.remove(i);
-					//personas.remove(j);
-					break;
 				}
-			}
+			
+			}//fin recorrer ArrayList Personas
 		}
-		viviendasLST.clear();
+		// Ahora metemos juntos a las organizaciones y personas sin hijos
+		List<Aspirante> restoaspirantes = new ArrayList<Aspirante>();
+		restoaspirantes.addAll(personas);
+		restoaspirantes.addAll(organizaciones);
+		Collections.shuffle(restoaspirantes);
+		
+		//Recorremos las viviendas restantes
+		for (int i = 0; i < viviendasLST.size(); i++) {
+			lstGanadores.add(new Ganador(viviendasLST.get(i), restoaspirantes.get(0)));
+			restoaspirantes.remove(0);
+		}
+		viviendasLST.clear(); //Terminamos de eliminar
 	}
+	
+	
 
 	private static void verListaGanadores(ArrayList<Ganador> lstGanadores) {
 		Iterator<Ganador> miIter = lstGanadores.iterator();

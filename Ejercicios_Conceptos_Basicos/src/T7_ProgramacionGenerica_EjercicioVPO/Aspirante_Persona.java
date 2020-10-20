@@ -33,7 +33,8 @@ public class Aspirante_Persona extends Aspirante{
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(super.toString());
-		return "-PERSONA [dni=" + dni + ", tipo=" + tipo + "]";
+		sb.append("-PERSONA [dni=" + dni + ", tipo=" + tipo + "]");
+		return sb.toString();
 	}
 
 }

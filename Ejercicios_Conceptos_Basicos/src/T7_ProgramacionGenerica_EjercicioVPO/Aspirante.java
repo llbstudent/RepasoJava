@@ -24,6 +24,6 @@ public class Aspirante {
 	//to String
 	@Override
 	public String toString() {
-		return "Aspirante [nombre=" + nombre + "]";
+		return " [nombre=" + nombre + "]";
 	}
 }
